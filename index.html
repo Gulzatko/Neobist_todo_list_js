@@ -4,42 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="stylesheet" href="style.css">
-     <script src="script.js" defer></script>
-    <title>Todo List</title>
+     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+     
+    <title>To-do List App</title>
 </head>
 <body>
-    <div class="container">
-        <div class="title">
-            <h1>What's up, Name</h1>
-        </div>
+    <script src="script.js" defer></script>
+
+    <div class="todo-container">
         <div class="input-todo">
+            <h1 id="greeting">What's up, <span id="type-name">name</span></h1>
             <div class="input-todo-header">
-                <h1>CREATE A TODO</h1>
+                <h3>CREATE A TODO</h3>
+                <img src="./assets/icons/icon.png" alt="icon">
             </div>
             <div class="input-todo-p">
-                <h3>What's on your todo list?</h3>
+                <p>What's on your todo list?</p>
             </div>
             <div class="todo-input">
                 <input type="text" placeholder="e.g get a milk">
             </div>
-        </div>
-        <div class="category">
-            <div class="business-category">
-                <input type="radio">
-                <h2>Business</h2>
-            </div>
-            <div class="business-category">
-                <input type="radio">
-                <h2>Personal</h2>
-            </div>
+            <div class="category">
+                <div class="business-category">
+                    <input type="radio">
+                    <h2>Business</h2>
+                </div>
+                <div class="business-category">
+                    <input type="radio">
+                    <h2>Personal</h2>
+                </div>
+             </div>
             <div class="add-todo-btn">
                 <button>Add todo</button>
             </div>
             <div class="todo-list">
-                <li>todo list</li>
-            </div>
-        </div>
-        
-    </div>
+                <li></li>
+             </div>
+          </div>
+      </div>
 </body>
 </html>

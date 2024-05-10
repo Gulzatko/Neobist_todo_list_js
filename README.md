@@ -7,8 +7,7 @@
    CSS :
 
    JS: 
-
-   
+  1}create funtionality for typing name on Greeting 
 
 
  
