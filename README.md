@@ -8,7 +8,9 @@
 
    JS: 
   1}create funtionality for typing name on Greeting
-  2} give functionality for input
+  2} give functionality for input value
+  3) give eventListener to the button 
+  4) functionality for categories
  
 
 

@@ -52,6 +52,9 @@ form{
     margin-top: 5px;
     margin-bottom: 20px;
 }
+#input-box:focus{
+    outline: none;
+}
 .category{
     width:700px;
     margin-left: 300px;
@@ -109,7 +112,7 @@ form{
     width:600px;
     margin-top: 50px;
     margin-left: 470px;
-    display: none;
+   
  }
 .todo-list-li {
     width:400px;

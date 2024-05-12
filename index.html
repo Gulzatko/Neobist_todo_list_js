@@ -15,11 +15,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
         integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>To Doo List</title>
+        <script src="script.js" defer></script>
+        <title>To Doo List</title>
 </head>
 
 <body>
-    <script src="script.js" defer></script>
+   
 
         <header>
             <h1 id="greeting">What's up, <span id="type-name">name</span></h1>
@@ -44,18 +45,18 @@
                 </div>
             </div>
             <div class="add-todo-btn">
-                <button type="submit">Add todo</button>
+                <button id="add-todo-btn" type="submit">Add todo</button>
             </div>
         </form>
 
          <div class="todo-conatiner">
-             <ul>
-               <li class="todo-list-li">
+             <ul lass="todo-conatiner-ul">
+               <!-- <li class="todo-list-li">
                 <input class="todo-list-radio" type="radio">
                  <input class="todo-list-input" type="text">
                  <button id="edit-btn">edit</button>
                  <button id="delete-btn">delete</button>
-               </li>
+               </li> -->
              </ul>
         </div>
    
