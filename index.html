@@ -21,26 +21,28 @@
 <body>
     <script src="script.js" defer></script>
 
-    
         <header>
             <h1 id="greeting">What's up, <span id="type-name">name</span></h1>
         </header>
         <form>
-             <h2>CREATE A TODO</h2>
+             <h2 id="input-title">CREATE A TODO</h2>
               <div class="todo-input">
-                <p>What's on your todo list?</p>
+                <h4>What's on your todo list?</h4>
                 <input id="input-box" type="text" placeholder="e.g get a milk">
             </div>
             <div class="category">
                 <h3>Pick a category</h3>
-                <div class="business-category">
-                    <input type="radio">
-                    <h2>Business</h2>
+                <div class="choose-category">
+                    <div class="business-category">
+                        <input type="radio">
+                        <h2>Business</h2>
+                    </div>
+                    <div class="personal-category">
+                        <input type="radio">
+                        <h2>Personal</h2>
+                    </div>
                 </div>
-                <div class="business-category">
-                    <input type="radio">
-                    <h2>Personal</h2>
-                </div>
+               
             </div>
             <div class="add-todo-btn">
                 <button type="submit">Add todo</button>
@@ -49,7 +51,7 @@
 
          <div class="todo-conatiner">
              <ul class="todo-list">
-                
+
              </ul>
         </div>
    
