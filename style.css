@@ -139,6 +139,11 @@ ul li.checked::before{
     opacity:0.6;
     transition: 0.3s;
 }
+
+
+.delete-btn:hover{
+   opacity: 1;
+}
 .save-btn{
     width:50px;
     background-color: red;
@@ -151,8 +156,4 @@ ul li.checked::before{
     font-size: 10px;
     opacity:0.6;
     transition: 0.3s;
-}
-
-.delete-btn:hover{
-   opacity: 1;
 }

@@ -5,6 +5,8 @@ const addBtn = document.getElementById("addBtn");
 
 addBtn.addEventListener("click", addTask);
 
+// add task function//
+
 function addTask() {
     if (inputBox.value === "") {
         alert("You must write something!")
@@ -27,6 +29,7 @@ function addTask() {
     inputBox.value = "";
 }
 
+// edit, remove and save buttons  function
 listContainer.addEventListener("click", (e) => {
     if (e.target.tagName === "BUTTON") {
         const button = e.target;
@@ -43,16 +46,18 @@ listContainer.addEventListener("click", (e) => {
             li.insertBefore(input,span);
             li.removeChild(span);
             button.classList.toggle("save-btn");
-            button.textContent ==="save";
+            button.textContent ="save";
            
-
-        } else if (button.textContent === "save") {
+       } else if (button.textContent === "save") {
             const input = li.firstElementChild;
             const span = document.createElement("span");
             span.textContent = input.value;
             li.insertBefore(span, input);
             li.removeChild(input);
             button.textContent = "edit";
-        }
+        } 
+    
+    } else if(e.target.tagName ==="LI"){
+        e.target.classList.toggle("checked");
     }
 })
