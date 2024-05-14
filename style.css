@@ -119,6 +119,13 @@ ul li.checked::before{
 .edit-btn:hover{
     opacity: 1;
  }
+ .edit-li{
+    background: transparent;
+    outline: none;
+    border: none;
+    color: orangered;
+
+ }
 .delete-btn{
     width:50px;
     background-color: red;
@@ -132,6 +139,20 @@ ul li.checked::before{
     opacity:0.6;
     transition: 0.3s;
 }
+.save-btn{
+    width:50px;
+    background-color: red;
+    outline: none;
+    border: 2px solid red;
+    border-radius: 40px;
+    color: white;
+    margin-left: 50px;
+    font-weight: 300;
+    font-size: 10px;
+    opacity:0.6;
+    transition: 0.3s;
+}
+
 .delete-btn:hover{
    opacity: 1;
 }
