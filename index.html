@@ -15,20 +15,38 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
         integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
-
-    <title>To Doo List</title>
+      
+        <title>To Doo List</title>
 </head>
-
 <body>
-    
+    <script src="script.js" defer></script> 
+    <div class="container">
+        <div class="greeting">
+            <h1>What's up,</h1>
+            <input type="autocomplete">
+        </div>
+         <div class="add-input">
+            <h2>Create a Todo</h2>
+            <h3>What's on your tood list?</h3>
+            <input type="text" id="input-box" placeholder="Add your text">
+         </div>
+         <div class="category">
+            <input type="radio" id="business">
+            <input type="radio" id="personal">
+        </div>
+        <div class="add-btn">
+            <button>Add todo</button>
+        </div>
+        <ul id="list-container">
+            <!-- <li class="checked">Task1</li>
+            <li>Task2</li>
+            <li>Task3</li> -->
+        </ul>
+     
+    </div>
    
 
-
-
-
-    <script src="script.js"></script>
+ 
 </body>
 
 </html>
