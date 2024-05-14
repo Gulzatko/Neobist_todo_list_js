@@ -27,6 +27,7 @@ function addTask() {
         li.appendChild(deleteBtn);
     }
     inputBox.value = "";
+    saveData();
 }
 
 // edit, remove and save buttons  function
@@ -47,6 +48,7 @@ listContainer.addEventListener("click", (e) => {
             li.removeChild(span);
             button.classList.toggle("save-btn");
             button.textContent ="save";
+            saveData();
            
        } else if (button.textContent === "save") {
             const input = li.firstElementChild;
@@ -55,9 +57,19 @@ listContainer.addEventListener("click", (e) => {
             li.insertBefore(span, input);
             li.removeChild(input);
             button.textContent = "edit";
+            saveData();
         } 
-    
     } else if(e.target.tagName ==="LI"){
         e.target.classList.toggle("checked");
-    }
+        saveData();
+    } 
 })
+//  saving data in local storage function
+
+function saveData(){
+    localStorage.setItem("data", listContainer.innerHTML);
+}
+function showTask(){
+    listContainer.innerHTML = localStorage.getItem("data");
+}
+showTask();
