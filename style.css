@@ -1,28 +1,34 @@
 *{
     margin:0;
     padding: 0;
-    font-family: "Poppins", sans-serif;
+    font-family: "Poppins", sans-serif;   
 }
+
 .container{
     width:100%;
     min-height: 100vh;
     background: linear-gradient(135deg, black, rgb(15, 0, 15));
-    padding: 10px;
     display:flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 100px;
+    padding-right: 100px;
+    
  }
  .main{
     display: flex;
     flex-direction: column;
     justify-items: center;
     align-items: center;
+    margin-right: 500px;
  }
 .greeting{
     width:100%;
     height: 50px;
      display:flex;
      flex-direction:row;
-     margin-left:550px;
+     margin-left:650px;
      margin-bottom: 100px; 
      margin-top: 50px;   
 }
@@ -63,6 +69,10 @@
    margin-top:30px;
    margin-left: 50px;
    color: orangered;
+}
+
+#list-container{
+    margin-right: 300px;
 }
 
 ul li{
@@ -158,41 +168,51 @@ ul li.checked::before{
 }
 
  /* category styling */
-.category{
+#category{
    width: 450px; 
    height: 150px;
- 
    margin-top: 50px;
    margin-bottom: 150px;
    margin-left: 50px;
    display: flex;
-   flex-direction:row;
+   flex-direction:column;
+   color: orangered;
 }
-.business-category, .personal-category{
-    width:50%;
-    height: 100%;
-    background-color:orangered;
-    margin: 20px 25px;
-   padding-top: 35px;
-   padding-left: 50px;
-    border-radius: 30px;
+#category h4{
+    width:100%;
     
 }
-.business-btn{
-    width:30px;
-    height:30px;
-    border-radius:50%;
-    border: 3px solid blue;
-    margin-left: 20px;
-    margin-bottom: 15px;
+.options{
+   margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
 }
-
-.personal-btn{
-    width:30px;
-    height:30px;
-    border-radius:50%;
-    border: 4px solid red;
-    margin-left: 25px;
-    margin-bottom: 15px;
-
+.options label{
+    width:50%;
+    height: 100px;
+    border-radius: 20px;
+    background-color: orangered;
+    margin-left: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    justify-content: center;
+}
+#addBtn{
+    width:200px;
+    height: 50px;
+    border: none;
+    border-radius: 25px;
+    background: orangered;
+    transition: box-shadow 1s ease-out;
+    cursor: pointer;
+}
+#addBtn:hover{
+   box-shadow: 2px 2px 2px 2px silver;
+}
+.businessBtn{
+    background-color: red;
 }

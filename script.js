@@ -1,12 +1,27 @@
 const inputBox = document.getElementById("input-box");
 const listContainer = document.getElementById("list-container");
-
 const addBtn = document.getElementById("addBtn");
+const categoryContainer = document.getElementById("category");
+const userName = document.getElementById('username');
+const option =document.getElementById("options");
+const blueSelect = document.getElementById("category1");
+const redSelect =document.getElementById("category2")
 
-addBtn.addEventListener("click", addTask);
+ addBtn.addEventListener("click", addTask);
 
+blueSelect.addEventListener("click",e=>{
+    e.preventDefault();
+    blueSelect.classList.add("clicked");
+    redSelect.classList.remove("clicked");
+    
+})
+redSelect.addEventListener("click",e=>{
+    e.preventDefault();
+    redSelect.classList.add("clicked");
+    blueSelect.classList.remove("clicked");
+     
+})
 // add task function//
-
 function addTask() {
     if (inputBox.value === "") {
         alert("You must write something!")
@@ -14,7 +29,13 @@ function addTask() {
     else {
         let span = document.createElement("span");
         span.innerHTML = inputBox.value;
+        
         let li = document.createElement("li");
+        if(blueSelect.classList.contains("clicked")) {
+            blueSelect.appendChild(li);
+        } else if(redSelect.classList.contains("clicked")){
+            redSelect.appendChild(li);
+        }
         li.appendChild(span);
         listContainer.appendChild(li);
         let editBtn = document.createElement('button');
@@ -25,10 +46,12 @@ function addTask() {
         deleteBtn.classList.add("delete-btn");
         deleteBtn.innerText = "remove";
         li.appendChild(deleteBtn);
+        
     }
     inputBox.value = "";
     saveData();
 }
+
 
 // edit, remove and save buttons  function
 listContainer.addEventListener("click", (e) => {
@@ -36,6 +59,7 @@ listContainer.addEventListener("click", (e) => {
         const button = e.target;
         const li = button.parentNode;
         const ul = li.parentNode;
+       
         if (button.textContent === "remove") {
             ul.removeChild(li);
         } else if (button.textContent ==="edit") {
@@ -64,12 +88,14 @@ listContainer.addEventListener("click", (e) => {
         saveData();
     } 
 })
-//  saving data in local storage function
 
+//  saving data in local storage function
 function saveData(){
     localStorage.setItem("data", listContainer.innerHTML);
+    
 }
 function showTask(){
     listContainer.innerHTML = localStorage.getItem("data");
+    
 }
 showTask();
