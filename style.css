@@ -209,6 +209,7 @@ ul li.checked::before{
     background: orangered;
     transition: box-shadow 1s ease-out;
     cursor: pointer;
+    color:white;
 }
 #addBtn:hover{
    box-shadow: 2px 2px 2px 2px silver;

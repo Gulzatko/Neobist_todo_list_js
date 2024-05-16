@@ -7,14 +7,14 @@ const option =document.getElementById("options");
 const blueSelect = document.getElementById("category1");
 const redSelect =document.getElementById("category2")
 
- addBtn.addEventListener("click", addTask);
+addBtn.addEventListener("click", addTask);
 
 blueSelect.addEventListener("click",e=>{
     e.preventDefault();
     blueSelect.classList.add("clicked");
-    redSelect.classList.remove("clicked");
-    
+    redSelect.classList.remove("clicked");  
 })
+
 redSelect.addEventListener("click",e=>{
     e.preventDefault();
     redSelect.classList.add("clicked");
